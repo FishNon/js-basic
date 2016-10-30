@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 输出</title>
+</head>
+<body>
+<button onclick="alert('ALERT 输出')">点我，查看alert输出</button>
+<p id="changeText" onclick="useInnerHTML()">这是一个段落...</p>
+<p id="changeValue" onclick="useConsole()">这是一个段落...</p>
+<script>
+    function useInnerHTML() {
+        document.getElementById('changeText').innerHTML = "This a paragraph...";
+    }
+    function useConsole() {
+        console.log('console.log("demo")');
+    }
+</script>
+</body>
+</html>

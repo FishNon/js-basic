@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变HTML图片</title>
+</head>
+<body>
+<img id="myImage" src="./img/pic_bulboff.gif" onclick="changeImage()"/>
+<p>点击灯泡即可开关灯泡。</p>
+<script>
+    function changeImage() {
+        var myImage = document.getElementById("myImage");
+        if(myImage.src.match("bulboff")){
+            myImage.src="./img/pic_bulbon.gif";
+        }else{
+            myImage.src="./img/pic_bulboff.gif";
+        }
+    }
+
+</script>
+</body>
+</html>
