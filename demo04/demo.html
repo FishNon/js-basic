@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script>
+        function orRight() {
+            var rightValue = true;
+            alert(rightValue || falseValue);
+        }
+        function orFalse() {
+            var rightValue = false;
+            try{
+                alert(rightValue || falseValue);
+            }catch (e){
+                alert(e);
+            }
+        }
+        function andRight() {
+            var rightValue = false;
+            alert(rightValue && falseValue);
+        }
+        function andFalse() {
+            var rightValue = true;
+            try{
+                alert(rightValue && falseValue);
+            }catch (e){
+                alert(e);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>点击每个模块查看输出；</h2>
+<div onclick="orRight()" style="border:1px solid #eee; width:500px;border-bottom: none;">
+    1、逻辑或操作（短路操作）：
+    <pre style="border:1px solid #eee;">
+        function orRight() {
+            var rightValue = true;
+            alert(rightValue || falseValue);
+        }
+    </pre>
+</div>
+<div onclick="orFalse()" style="border:1px solid #eee; width:500px;border-bottom: none; color:orangered;">
+    2、逻辑或操作（报错）：
+    <pre style="border:1px solid #eee;">
+        function orFalse() {
+            var rightValue = false;
+            try{
+                alert(rightValue || falseValue);
+            }catch (e){
+                alert(e);
+            }
+        }
+    </pre>
+</div>
+<div onclick="andRight()" style="border:1px solid #eee; width:500px;border-bottom: none;">
+    3、逻辑与操作（短路操作）：
+    <pre style="border:1px solid #eee;">
+        function andRight() {
+            var rightValue = false;
+            alert(rightValue && falseValue);
+        }
+    </pre>
+</div>
+<div onclick="andFalse()" style="border:1px solid #eee; width:500px;border-bottom: none; color:orangered;">
+    4、逻辑与操作（报错）：
+    <pre style="border:1px solid #eee;">
+        function andFalse() {
+            var rightValue = true;
+            try{
+                alert(rightValue && falseValue);
+            }catch (e){
+                alert(e);
+            }
+        }
+    </pre>
+</div>
+</body>
+</html>
